@@ -11,35 +11,34 @@
     </div>
 
     
-    <div class="row justify-content-center mb-4">
-        <div class="col-10 text-center bg-primary text-white py-2 rounded">
-            <h5 class="m-0 text-uppercase">
-                Comercialización de automotores nuevos y usados
-            </h5>
-        </div>
-    </div>
+
 
    
-    <div class="row justify-content-center">
-        <div class="col-10">
-            <table class="table table-striped table-bordered align-middle text-center">
-                <thead class="table-dark">
-                    <tr>
-                        <th>#</th>
-                        <th>Marca</th>
-                        <th>Línea</th>
-                        <th>Modelo</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let car of cars; let i = index">
-                        <td>{{ i + 1 }}</td>
-                        <td>{{ car.marca }}</td>
-                        <td>{{ car.linea }}</td>
-                        <td>{{ car.modelo }}</td>
-                    </tr>
-                </tbody>
-            </table>
+    <div class="row">
+        <!-- col-12 en móviles, col-md-9 (9/12 = 3/4) en pantallas md+; ms-md-3 crea desplazamiento hacia la derecha (alineación similar al mock) -->
+        <div class="col-12 col-md-9 ms-md-3">
+            <div class="table-frame">
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered align-middle text-center">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>#</th>
+                                <th>Marca</th>
+                                <th>Línea</th>
+                                <th>Modelo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let car of cars; let i = index">
+                                <td>{{ i + 1 }}</td>
+                                <td class="text-start px-3">{{ car.marca }}</td>
+                                <td class="text-start px-3">{{ car.linea }}</td>
+                                <td class="text-start px-3">{{ car.modelo }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
 
